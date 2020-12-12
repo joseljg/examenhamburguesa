@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondon"
+    tools:context=".PedidoActivity">
+
+    <TextView
+        android:id="@+id/txt_mensaje_codigo_promocional"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Dispone de código promocional? "
+        android:textColor="@color/white"
+        android:textSize="@dimen/tam_letra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_codigo"
+        android:layout_width="233dp"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Codigo"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_codigo"
+        app:layout_constraintEnd_toStartOf="@+id/bt_codigo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_mensaje_codigo_promocional" />
+
+    <Button
+        android:id="@+id/bt_codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="aplicar"
+        android:text="Aplicar"
+        app:layout_constraintEnd_toEndOf="@+id/txt_mensaje_codigo_promocional"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mensaje_codigo_promocional" />
+
+    <TextView
+        android:id="@+id/txt_hamburguesa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_codigo"
+        tools:text="hamburguesa" />
+
+    <TextView
+        android:id="@+id/txt_complemento"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_hamburguesa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_hamburguesa"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hamburguesa"
+        tools:text="Complemento" />
+
+    <TextView
+        android:id="@+id/txt_cupon"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_complemento"
+        app:layout_constraintStart_toStartOf="@+id/txt_complemento"
+        app:layout_constraintTop_toBottomOf="@+id/txt_complemento"
+        tools:text="cupon" />
+
+    <TextView
+        android:id="@+id/txt_iva"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_cupon"
+        app:layout_constraintStart_toStartOf="@+id/txt_cupon"
+        app:layout_constraintTop_toBottomOf="@+id/txt_cupon"
+        tools:text="Iva" />
+
+    <TextView
+        android:id="@+id/txt_total"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_iva"
+        app:layout_constraintTop_toBottomOf="@+id/txt_iva"
+        tools:text="total:" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
